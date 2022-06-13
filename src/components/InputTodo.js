@@ -4,7 +4,7 @@ class InputTodo extends Component {
   state = {
     title: "",
   }
-  
+
   onChange = e => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -13,7 +13,7 @@ class InputTodo extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state.title);
+    this.props.addTodoProps(this.state.title);
   };
 
   render() {
