@@ -5,7 +5,7 @@ import InputTodo from './InputTodo';
 import TodosList from './TodosList';
 
 const TodoContainer = () => {
-  const [todos, setTodos] = useState(getInitialTodos())
+  const [todos, setTodos] = useState(getInitialTodos());
 
   useEffect(() => {
     console.log('test run');
@@ -21,16 +21,16 @@ const TodoContainer = () => {
 
   function getInitialTodos() {
     // getting stored items
-    const temp = localStorage.getItem("todos")
-    const savedTodos = JSON.parse(temp)
-    return savedTodos || []
+    const temp = localStorage.getItem('todos');
+    const savedTodos = JSON.parse(temp);
+    return savedTodos || [];
   }
 
   useEffect(() => {
     // storing todos items
-    const temp = JSON.stringify(todos)
-    localStorage.setItem("todos", temp)
-  }, [todos])
+    const temp = JSON.stringify(todos);
+    localStorage.setItem('todos', temp);
+  }, [todos]);
 
   const handleChange = (id) => {
     setTodos((prevState) => prevState.map((todo) => {
