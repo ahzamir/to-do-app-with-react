@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { FaTrash } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 import styles from './TodoItem.module.css';
 
-const TodoItem = (props) => {
+const TodoItem = ({
+  id, completed, title, handleChangeProps, deleteTodoProps, setUpdate,
+}) => {
   const [editing, setEditing] = useState(false);
+
+  TodoItem.propTypes = {
+    id: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    handleChangeProps: PropTypes.func.isRequired,
+    deleteTodoProps: PropTypes.func.isRequired,
+    setUpdate: PropTypes.func.isRequired,
+  };
 
   const handleEditing = () => {
     setEditing(true);
@@ -22,8 +34,6 @@ const TodoItem = (props) => {
     textDecoration: 'line-through',
   };
 
-  const { completed, id, title } = props.todo;
-
   const viewMode = {};
   const editMode = {};
 
@@ -34,7 +44,6 @@ const TodoItem = (props) => {
   }
 
   useEffect(() => () => {
-    console.log('Cleaning up...');
   }, []);
 
   return (
@@ -44,9 +53,9 @@ const TodoItem = (props) => {
           type="checkbox"
           className={styles.checkbox}
           checked={completed}
-          onChange={() => props.handleChangeProps(id)}
+          onChange={() => handleChangeProps(id)}
         />
-        <button onClick={() => props.deleteTodoProps(id)}>
+        <button type="button" onClick={() => deleteTodoProps(id)}>
           <FaTrash />
         </button>
         <span style={completed ? completedStyle : null}>{title}</span>
@@ -57,7 +66,7 @@ const TodoItem = (props) => {
         className={styles.textInput}
         value={title}
         onChange={(e) => {
-          props.setUpdate(e.target.value, id);
+          setUpdate(e.target.value, id);
         }}
         onKeyDown={handleUpdatedDone}
       />
