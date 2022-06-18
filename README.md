@@ -1,32 +1,32 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To-do list with React
 
-> Description the project.
+> This is a React web app. I have used React(hooks, state and props), HTML, CSS and Javascript(ES6) for this project and the user can manage the app to add, remove and edit todo tasks, you can use it in your local machin just by cloning this repo and see the instruction below to setup the project app.
 
 
 ## Built With 
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript(ES6)
+- React
+- Webpack
 
-## Live Demo (if available) 💻
+This project built with the help of HTML, CSS, React, and JavaScript you can see the result and use the cods by cloning this repo on your local machine by Git and GitHub. use npm install and then npm start in your command line to see the main page in your browser.
+
+## Live Demo 💻
 
 [Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-You must have a browser on your device, visual code, a git version, node.js installed in your device and clone the repo from GitHub and follow the steps below.
+You must have a browser on your device, a visual code, a git version installed, node.js installed in your device and clone the repo from GitHub and use it.
 
 ### Setup
 
@@ -38,19 +38,13 @@ inside the project direcory open the commanline or Terminal, run npm install to 
 
 ### Usage
 
-### Run tests
-
-For running tests inside the project directory run npm test in command line or Terminal.
-
-### Deployment
-
+This app is build with React components so you can modify and edit components in the src folder.
 
 ## Authors
 
 - GitHub: [@ahzamir](https://github.com/ahzamir).
 - Twitter: [@YousufiZamir](https://twitter.com/YousufiZamir)
-- LinkedIn: [ahmad-zamir-yousufi](https://www.linkedin.com/in/ahzamir/)
-
+- LinkedIn: [ahmad-zamir-yousufi](https://www.linkedin.com/in/ahmad-zamir-yousufi-70603317b/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
